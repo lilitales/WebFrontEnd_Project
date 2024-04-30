@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 目前不用reset最直接的效果就是li前面的黑點還在，所以要清空 -->
+    <link rel="stylesheet" href="reset.css">
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap' rel='stylesheet' type='text/css'>
+    <style>
+        * {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .wrap {
+            width: 1200px;
+            display: flex;
+        }
+        .card {
+            width: 370px;
+            margin: 15px;
+            text-align: center;
+            /* 外框 */
+            background-color:#ffffff;
+            border-radius:5px;
+            border: 1px solid #a1a1a1;
+            padding:20px;
+        }
+
+        .card img {
+            /* 不管圖片多大多小，填滿框架 */
+            width: 100%;
+            height: 300px;
+        }
+        .card h2{
+            border-bottom: 1px solid #888;
+            padding-bottom: .3em;
+            margin-bottom: .4em;
+            font-weight: 900;
+        }
+        .card article {
+            line-height: 1.6;
+            font-weight: 300;
+            text-align: left;
+        }
+        .card .mine-skill>li{
+            list-style-type: "\1F44D";
+        }
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <section class="card">
+            <img src="profile_ver-2_resource/PXL_20210727_095217217.MP.jpg" alt="個人照">
+            <h2>陳立維</h2>
+            <article>
+                中華華大學資訊工程學系畢業，以程式設計為志業。<br>
+                <br>
+                對於寫code的精確與邏輯有著極高的追求，且追求寫出容易閱讀和容易維護的程式。我鍾愛於深入探索程式語言和架構的核心原理，這種對技術細節的執著有時讓我鑽研到非常專精的層次，儘管這種深度有時被視為過於堅持細節，但它也賦予了我在解決技術問題時獨到的深入見解。<br>
+                <br>
+                然而，我在創造性思維和創新方面有所欠缺，這讓我更適合在那些需要高度專業技能和精確操作的執行角色中發揮才能。在未來的職業規劃中，我希望能夠利用我的專業技能，在一個以成果和效率為導向的團隊中，為軟體開發和系統優化貢獻我的力量。
+            </article>
+        </section>
+        <section class="card">
+            <img src="profile_ver-2_resource/DALL_E_generate.webp" alt="工作經歷示意圖">
+            <h2>工作經歷</h2>
+            <article>
+                高中畢業時因家庭及個人因素未讀大學而在加油站及餐廳打過工，
+                後經職訓進入軟體公司開發後端之業務邏輯，<br>
+                使用Java(版本8)，搭配Hibernate之framework做OR-Mapping，
+                在處理大量資料及效能瓶頸點時使用SQL，Database則是IBM DB2。
+            </article>
+        </section>
+        <section class="card">
+            <img src="profile_ver-2_resource/java.png" alt="">
+            <h2>技能</h2>
+            <article>
+                <ul class="mine-skill">
+                    <li>C/C++</li>
+                    <li>Java</li>
+                    <li>SQL</li>
+                    <li>Python</li>
+                    <li>Python-Machine Learning</li>
+                    <li>Python-Deep Learning</li>
+                </ul>
+               
+
+            </article>
+        </section>
+    </section>
+</body>
+</html>
