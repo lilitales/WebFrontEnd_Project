@@ -1,20 +1,67 @@
-.wrap {
-    /* 置中 */
-    width: 600px;
-    margin: auto;
-    background: #aaa;
-    flex-wrap: wrap;
+* {
+    font-family: 'Noto Sans TC', sans-serif;
 }
-.self-profile .item > h3 {
+
+.header {
+    display: flex;
+    /* padding- 上下 左右 */
+    padding: 6px 10px;
+    background-color: #000;
+}
+
+.header article{
+    width: 100%;
+    text-align: center;
+
+    line-height: 52px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #fff;
+}
+
+.banner img {
+    width: 100%;
+    height: 300px;
+    padding: 0 0 30px;
+}
+
+.profile {
+    background-color: #cff;
+    text-align: center;
+}
+.profile .wrap {
+    width: 800px;
+    /* TODO 不加margin auto時justify-content怎麼調都沒用 */
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+.profile .item {
+    width: 50%;
+}
+.profile .item img {
+    width: 300px;
+    vertical-align: bottom;
+}
+
+.profile .item > h2 {
     width: 100%;
     margin: auto;
     font-size: 42px;
     text-align: center;
 }
 
-.self-profile .wrap {
-    display: flex;
+.wrap11 {
+    /* 置中 */
+    width: 600px;
+    margin: auto;
+    background: #aaa;
+    flex-wrap: wrap;
 }
+
+
+
 
 .self-profile .wrap .item {       
     background-color: #9f3;     
