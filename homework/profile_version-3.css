@@ -52,22 +52,17 @@
     text-align: center;
 }
 
-.wrap11 {
-    /* 置中 */
-    width: 600px;
+.workExp > h2 {
+    width: 100%;
     margin: auto;
-    background: #aaa;
-    flex-wrap: wrap;
-}
-
-
-
-
-.self-profile .wrap .item {       
-    background-color: #9f3;     
-    width: 256px;
-    border: 2px solid;
-    padding: 10px;
-    margin: 0 10px;
+    font-size: 42px;
     text-align: center;
+}
+.workExp > article {
+    width: 660px;
+    text-align: center;
+    margin: auto;
+    padding: 20px 
+    
+    0px 40px;
 }
