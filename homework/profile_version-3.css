@@ -30,8 +30,9 @@
     text-align: center;
 }
 .profile .wrap {
-    width: 800px;
+    width: 1200px;
     /* TODO 不加margin auto時justify-content怎麼調都沒用 */
+    /* 因為.wrap內的元素排列才是照justify-content，.wrap本身照自己對上一層怎麼排 */
     margin: auto;
 
     display: flex;
@@ -44,7 +45,6 @@
     width: 300px;
     vertical-align: bottom;
 }
-
 .profile .item > h2 {
     width: 100%;
     margin: auto;
@@ -52,17 +52,88 @@
     text-align: center;
 }
 
-.workExp > h2 {
+.workExp {
+    background-color: rgb(255, 204, 255);
+}
+/* .workExp > h2 {
+    width: 100%;
+    margin: auto;
+    font-size: 42px;
+    text-align: center;
+} */
+.workExp > article {
+    width: 660px;
+    text-align: center;
+    margin: auto;
+    padding: 20px 0px 40px;
+}
+
+/* .skills > h2 {
+    width: 100%;
+    margin: auto;
+    font-size: 42px;
+    text-align: center;
+} */
+
+/* div底下第一個h2預設共用style */
+div > h2 {
     width: 100%;
     margin: auto;
     font-size: 42px;
     text-align: center;
 }
-.workExp > article {
-    width: 660px;
-    text-align: center;
+
+.skills .wrap {
+    width: 1200px;
     margin: auto;
-    padding: 20px 
-    
-    0px 40px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.skills .item {
+    width: 360px;
+    border: 2px solid rgb(206, 176, 208);
+    border-radius: 5px;
+    margin: 5px;
+    /* li的樣式超過border先用padding超過20px因應 */
+    /* 用 list-style-position: inside 解決*/
+    padding: 10px;
+}
+.skills .item > h2 {
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+}
+.skills .skill-progLang  li{
+    list-style-position: inside;
+    list-style-type: "\1F44D";
+}
+
+.portfolio .wrap {
+    width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+.portfolio .item {
+    width: 560px;
+    border: 2px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+}
+.portfolio .item > h2 {
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+}
+
+@counter-style circled-alpha {
+    system: fixed;
+    symbols: Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ;
+    suffix: " ";
+}
+.portfolio li{
+    list-style-position: inside;
+    list-style-type: circled-alpha;
 }
