@@ -9,10 +9,10 @@
     background-color: #000;
 }
 
-.header article{
+.header article {
     width: 100%;
-    text-align: center;
 
+    text-align: center;
     line-height: 52px;
     text-decoration: none;
     font-size: 36px;
@@ -22,7 +22,8 @@
 .banner img {
     width: 100%;
     height: 300px;
-    padding: 0 0 30px;
+    vertical-align: bottom;
+    padding: 0;
 }
 
 .profile {
@@ -54,6 +55,7 @@
 
 .workExp {
     background-color: rgb(255, 204, 255);
+    padding: 20px;
 }
 /* .workExp > h2 {
     width: 100%;
@@ -68,15 +70,7 @@
     padding: 20px 0px 40px;
 }
 
-/* .skills > h2 {
-    width: 100%;
-    margin: auto;
-    font-size: 42px;
-    text-align: center;
-} */
-
-/* div底下第一個h2預設共用style */
-div > h2 {
+.subTitle {
     width: 100%;
     margin: auto;
     font-size: 42px;
@@ -92,12 +86,13 @@ div > h2 {
 }
 .skills .item {
     width: 360px;
+    margin: 5px;
+    padding: 10px;
+
     border: 2px solid rgb(206, 176, 208);
     border-radius: 5px;
-    margin: 5px;
     /* li的樣式超過border先用padding超過20px因應 */
     /* 用 list-style-position: inside 解決*/
-    padding: 10px;
 }
 .skills .item > h2 {
     width: 100%;
