@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img {
+            vertical-align: bottom;
+        }
+
+        .banner img{
+            width: 100%;
+        }
+        .title{
+            margin: 0 0 20px;
+            padding: 30px 10px;
+            background-color: #caa;
+        }
+        .title h2 {
+            text-align: center;
+            font-size: 46px;
+        }
+        .title p {
+            text-align: center;
+            font-size: 22px;
+        }
+        
+        .item-group {
+            width: 100%;
+            max-width: 1458px;
+        }
+
+        .item {
+            margin: 0 10px 20px;
+        }
+        .item .pic img {
+            /* 100%-滿版 */
+            width: 100%;
+        }
+        .item .text h3 {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .service {
+            margin: 60px 0;
+            background-color: #ffa;
+        }
+        /* TODO 影片中要找出來的.item共用問題 :高度/margin/padding */
+        .service .item {
+            margin: 10px 10px;
+        }
+
+        /* 寬版 */
+        @media screen and (min-width: 768px)  {
+            .item-group {
+                display: flex;
+            }
+
+            .service .item {
+                display: flex;
+            }
+            .service .item .pic,
+            .service .item .text {
+                width: 50%;
+                margin: 0;
+            }
+            .service .item .text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                padding: 0 20px;
+                box-sizing: border-box;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+     <!-- banner是滿版內容 -->
+     <div class="banner">
+        <img src="https://fakeimg.pl/1200x300/" alt="">
+    </div>
+
+    <!--  -->
+    <div class="about">
+        <div class="wrap">
+            <section class="title">
+                <h2>關於我們</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat pariatur ratione culpa nesciunt incidunt, voluptatibus vel adipisci modi rerum repellendus?</p>
+            </section>
+            <section class="item-group">
+                <section class="item">
+                    <div class="pic">
+                        <img src="https://fakeimg.pl/300x200/" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <article>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At cupiditate quis totam vero excepturi sapiente ab, esse obcaecati ad modi omnis nesciunt enim exercitationem consequuntur quae iste eos. Doloribus, officiis.
+                        </article>
+                    </div>
+                </section>
+                <section class="item">
+                    <div class="pic">
+                        <img src="https://fakeimg.pl/300x200/" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <article>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At cupiditate quis totam vero excepturi sapiente ab, esse obcaecati ad modi omnis nesciunt enim exercitationem consequuntur quae iste eos. Doloribus, officiis.
+                        </article>
+                    </div>
+                </section>
+                <section class="item">
+                    <div class="pic">
+                        <img src="https://fakeimg.pl/300x200/" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <article>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At cupiditate quis totam vero excepturi sapiente ab, esse obcaecati ad modi omnis nesciunt enim exercitationem consequuntur quae iste eos. Doloribus, officiis.
+                        </article>
+                    </div>
+                </section>
+        </div>
+    </div>
+
+    <!-- service -->
+    <div class="service">
+        <div class="wrap">
+            <section class="item-group">
+                <section class="item">
+                    <div class="pic">
+                        <img src="https://fakeimg.pl/300x200/" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <article>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At cupiditate quis totam vero excepturi sapiente ab, esse obcaecati ad modi omnis nesciunt enim exercitationem consequuntur quae iste eos. Doloribus, officiis.
+                        </article>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="wrap">
+            <section class="title">
+                <h2>產品</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat pariatur ratione culpa nesciunt incidunt, voluptatibus vel adipisci modi rerum repellendus?</p>
+            </section>
+            <section class="item-group">
+                <section class="item">
+                    <div class="pic">
+                        <img src="https://fakeimg.pl/300x200/" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <article>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At cupiditate quis totam vero excepturi sapiente ab, esse obcaecati ad modi omnis nesciunt enim exercitationem consequuntur quae iste eos. Doloribus, officiis.
+                        </article>
+                    </div>
+                </section>
+                <section class="item">
+                    <div class="pic">
+                        <img src="https://fakeimg.pl/300x200/" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <article>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At cupiditate quis totam vero excepturi sapiente ab, esse obcaecati ad modi omnis nesciunt enim exercitationem consequuntur quae iste eos. Doloribus, officiis.
+                        </article>
+                    </div>
+                </section>
+                <section class="item">
+                    <div class="pic">
+                        <img src="https://fakeimg.pl/300x200/" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <article>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At cupiditate quis totam vero excepturi sapiente ab, esse obcaecati ad modi omnis nesciunt enim exercitationem consequuntur quae iste eos. Doloribus, officiis.
+                        </article>
+                    </div>
+                </section>
+                <section class="item">
+                    <div class="pic">
+                        <img src="https://fakeimg.pl/300x200/" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <article>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At cupiditate quis totam vero excepturi sapiente ab, esse obcaecati ad modi omnis nesciunt enim exercitationem consequuntur quae iste eos. Doloribus, officiis.
+                        </article>
+                    </div>
+                </section>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: 1458px;
+        }
+        .item {
+            background-color: #ffa;
+            /* 上 | 左右 | 下 */
+            margin: 0px 10px 20px;
+            padding: 10px;
+        }
+
+        @media screen and (min-width: 768px)  {
+            .wrap {
+                /* min-width以上(ex: 768px)則 flexible*/
+                display: flex;
+            }
+            .item {
+                /* 固定寬度 */
+                width: 33.3%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item">
+            <h2>title</h2>
+            <p>2233</p>
+        </div>
+        <div class="item">
+            <h2>title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt non facilis dolor sequi eaque maxime aut, quidem quisquam quibusdam nostrum, eum nisi ad ipsam dolore nulla! Animi harum iste hic.</p>
+        </div>
+        <div class="item">
+            <h2>title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae incidunt animi voluptates laudantium dolores accusantium?</p>
+        </div>
+    </div>
+</body>
+</html>

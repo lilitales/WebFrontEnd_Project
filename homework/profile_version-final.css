@@ -1,0 +1,130 @@
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.header {
+    width: 100%;
+    padding: 6px 10px;
+    background-color: #000;
+}
+
+.header article {
+    width: 100%;
+
+    text-align: center;
+    line-height: 52px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #fff;
+}
+
+.banner img {
+    width: 100%;
+    height: 300px;
+    vertical-align: bottom;
+    padding: 0;
+}
+
+.subTitle {
+    width: 100%;
+    margin: auto;
+    font-size: 42px;
+    text-align: center;
+}
+
+.profile {
+    background-color: #cff;
+    text-align: center;
+}
+.profile .wrap {
+    width: 100%;
+    max-width: 1458px;
+    margin: auto;
+}
+.profile .pic img{
+    width: 80%;
+    vertical-align: bottom;
+}
+.profile .profile-description {
+    padding: 10px 20px;
+}
+
+.workExp {
+    background-color: rgb(255, 204, 255);
+    padding: 20px;
+}
+
+.skills .item {
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid rgb(206, 176, 208);
+    border-radius: 5px;
+}
+.skills .item > h2 {
+    text-align: center;
+    font-size: 22px;
+}
+.skills .skill-progLang ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.skills .skill-progLang  li{
+    /* TODO 因為要內容對齊左邊所以先寫死了長度，待查解決方式ㄋ */
+    width: 150px;
+    list-style-position: inside;
+    list-style-type: "\1F44D";
+}
+
+.portfolio .item > h2 {
+    text-align: center;
+    font-size: 22px;
+}
+.portfolio .item {
+    border: 2px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+}
+@counter-style circled-alpha {
+    system: fixed;
+    symbols: Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ;
+    suffix: " ";
+}
+.portfolio li{
+    list-style-position: inside;
+    list-style-type: circled-alpha;
+}
+
+/* 寬版 */
+@media screen and (min-width: 768px)  {
+    .profile .wrap {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .profile .item {
+        width: 50%;
+    }
+    .skills .wrap {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .skills .item {
+        width: 360px;
+        margin: 5px;
+        padding: 10px;
+    }
+    .portfolio .wrap {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .portfolio .item {
+        width: 560px;
+    }
+}

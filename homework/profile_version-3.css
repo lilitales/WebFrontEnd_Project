@@ -44,6 +44,7 @@
 }
 .profile .item img {
     width: 300px;
+    /* 解決圖片下方空白問題-vertical-align預設對齊baseline，設top/middle/bottom其一 */
     vertical-align: bottom;
 }
 .profile .item > h2 {
