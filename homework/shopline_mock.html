@@ -79,7 +79,8 @@
         }
 
         /* 底線效果 */
-        .title-panel > li > button::after, a::after{
+        .title-panel > li > button::after, 
+        .bottom-line::after{
             content:" ";
             display:block; 
             width: 0%;
@@ -87,7 +88,8 @@
             background-color: #f00;
             transition: .4s .2s;
         }
-        .title-panel > li > button:hover::after, a:hover::after{
+        .title-panel > li > button:hover::after,
+        .bottom-line:hover::after{
             width:100%;
         }
 
@@ -118,7 +120,7 @@
         </a>
         <ul class="title-panel">
             <li>
-                <a href="#" class="def-link">產品核心</a>
+                <a href="#" class="def-link bottom-line">產品核心</a>
             </li>
             <li>
                 <button>新手上路</button>
