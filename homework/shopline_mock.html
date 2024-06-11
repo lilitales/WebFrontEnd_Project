@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shopline 模仿網站</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap' rel='stylesheet' type='text/css'>
+    <script>
+        
+        $(document).ready(function(){
+            var intervalObj = ""
+            resetInterval(1)
+            console.log('start')
+
+            function resetInterval(t) {
+                clearInterval(intervalObj)
+                intervalObj = setInterval(function() {
+                    // 固定3張圖片所以到4時重置為1
+                    4 == t && (t = 1),
+                    $(".web-img").attr("data-open", t),
+                    t++
+                }, 3e3)
+            }
+        });
+    </script>
+    <style>
+        
+        /* 按鈕reset */
+        button {
+            background: transparent;
+            border: 0;
+        }
+
+        /* 使用的預設值 */
+        .def-btn {
+            /* TODO RWD設定不同版面寬度 */
+            width: 180px; 
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none;
+            background-color: #0061FF;
+            height: 50px;
+            border-radius: 8px;
+            color: #fff;
+            transition: .3s all;
+        }
+        .def-link {
+            text-decoration: none;
+            color: inherit;
+        }
+        .def-main-view {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 10px;
+            background-color: #ebf1f8;
+        }
+
+        .title-panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .title-panel > li > button {
+            padding: 0 10px;
+        }
+
+        /* 底線效果 */
+        .title-panel > li > button::after, a::after{
+            content:" ";
+            display:block; 
+            width: 0%;
+            height: 4px;
+            background-color: #f00;
+            transition: .4s .2s;
+        }
+        .title-panel > li > button:hover::after, a:hover::after{
+            width:100%;
+        }
+
+        .img-wrap {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: 1s transform;
+        }
+        .web-img[data-open="1"] .img-wrap {
+            transform: translateX(calc(-100% * 0))
+        }
+
+        .web-img[data-open="2"] .img-wrap {
+            transform: translateX(calc(-100% * 1))
+        }
+
+        .web-img[data-open="3"] .img-wrap {
+            transform: translateX(calc(-100% * 2))
+        }
+    </style>
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <a href="#" class="logo">
+            <img src="shopline_mock_src/logo.png" alt="shopline">
+        </a>
+        <ul class="title-panel">
+            <li>
+                <a href="#" class="def-link">產品核心</a>
+            </li>
+            <li>
+                <button>新手上路</button>
+            </li>
+            <li>
+                <button>開店服務</button>
+            </li>
+            <li>
+                <button>行銷推廣</button>
+            </li>
+            <li>
+                <button>營運管理</button>
+            </li>
+            <li>
+                <button>方案費用</button>
+            </li>
+            <li>
+                <button>更多資源</button>
+            </li>
+        </ul>
+        <a href="#" class="def-btn">免費試用</a>
+    </div>
+
+    <div class="wrap">
+        <section class="def-main-view ">
+            <div class="web-info">
+                <h1>
+                    想在哪開店創業？
+                    <div>
+                        不管是社群購物
+                    </div>
+                    SHOPLINE 一站輕鬆開賣
+                </h1>
+            </div>
+            <div class="web-img" data-open="1">
+                <div class="img-wrap" >
+                    <picture>
+                        <img src="shopline_mock_src/web-service.png" 
+                        width="505" height="442"
+                        alt="服務圖片">
+                    </picture>
+                </div>
+            </div>    
+        </section>
+
+    </div>
+</body>
+</html>
