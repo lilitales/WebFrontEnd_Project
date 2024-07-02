@@ -11,9 +11,11 @@
         
         $(document).ready(function(){
             var intervalObj = ""
-            resetInterval(1)
+            //TODO 未來再研究輪播圖片效果
+            //resetInterval(1)
             console.log('start')
 
+            let t = 1
             function resetInterval(t) {
                 clearInterval(intervalObj)
                 intervalObj = setInterval(function() {
@@ -55,8 +57,29 @@
         }
         .def-main-view {
             display: flex;
-            justify-content: space-between;
+            flex-direction: row;
+            justify-content: center;
             align-items: center;
+
+            padding: 80px;
+        }
+        .web-info {
+            width: 50%;
+        }
+        .web-img {
+            width: 50%;
+            overflow: hidden;
+            border-radius: 50% 50% 0 0;
+        }
+        .web-img .img-wrap {
+            width: 100%;
+            vertical-align: bottom;
+        }
+
+        h1 {
+            font-size: 250%;
+            font-weight: bold;
+            color: #052855
         }
 
         .header {
@@ -96,8 +119,10 @@
         .img-wrap {
             width: 100%;
             height: 100%;
-            position: absolute;
+            /* 原始設定 */
+            /* position: absolute; */
             transition: 1s transform;
+            z-index: -1;
         }
         .web-img[data-open="1"] .img-wrap {
             transform: translateX(calc(-100% * 0))
@@ -110,6 +135,11 @@
         .web-img[data-open="3"] .img-wrap {
             transform: translateX(calc(-100% * 2))
         }
+
+        /* TODO 實驗 */
+        /* img {
+            border-radius: 30%;
+        } */
     </style>
 </head>
 <body>
@@ -155,17 +185,16 @@
                     SHOPLINE 一站輕鬆開賣
                 </h1>
             </div>
-            <div class="web-img" data-open="1">
+            <div class="web-img">
                 <div class="img-wrap" >
                     <picture>
-                        <img src="shopline_mock_src/web-service.png" 
+                        <img src="shopline_mock_src/web-service-1.jpg" 
                         width="505" height="442"
                         alt="服務圖片">
                     </picture>
                 </div>
             </div>    
         </section>
-
     </div>
 </body>
 </html>
