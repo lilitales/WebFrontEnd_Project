@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金魚都能懂的網頁切版 : 超通用橫式版面 NO005</title>
+    <style>
+        .wrap {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(-30deg, #fdaecb, #e7597f, #fe8556);
+        }
+        .container {
+            width: 1200px;
+            display: flex;
+            /* margin: auto 左右對齊 */
+            margin: auto;
+            /* wrap讓他可以換行 */
+            flex-wrap: wrap;
+        }
+        .item {
+            width: 568px;
+            margin: 15px;
+            /* for每個子項目裡圖片區塊和文字區塊橫向排列 */
+            display: flex;
+
+            background-color: #fff;
+            border: 1px solid #888;
+        }
+        
+
+        .item .pic {
+            /* 個別元素寬度是在個別元素裡設定而不是外層 */
+            width: 50%;
+            
+        }
+        .item .pic img {
+            /* 因為圖片400x400超過容器尺寸 所以要設定width和height*/
+            width: 100%;
+            height: 100%;
+            /* TODO */
+            object-fit: cover;
+        }
+
+        .item .txt {
+             /* 個別元素寬度是在個別元素裡設定而不是外層 */
+             width: 50%;
+             padding: 20px;
+             box-sizing: border-box;
+             
+             display: flex;
+             flex-direction: column;
+             /* justify-content: center; */
+        }
+        .item .txt h2 {
+            margin-bottom: .4em;
+        }
+        .item .txt p {
+            
+        }
+        .item .txt .btn {
+            line-height: 1.5em;
+            border: 1px solid #ccc;
+            padding: 0 1em;
+            /* TODO */
+            align-self: flex-end;
+            /* 拿掉底下 */
+            text-decoration: none;
+            /* 圓角 */
+            border-radius: 200px;
+            /* TODO margin-top 不會隨上面高度改變而異動 */
+            margin-top: auto;
+        }
+        .item .txt .btn:hover {
+            background-color: #ccc;
+            color: #fff
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="item">
+                <!--左邊圖片區域-->
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400?random=10" alt="">
+                </div>
+                <!--右邊文字區域-->
+                <div class="txt">
+                    <h2>網頁入門</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto vero facere aperiam a odit, perspiciatis possimus ipsa perferendis corrupti? Voluptate.
+                    </p>
+                    <a href="" class="btn">more</a>
+                </div>
+            </div>
+            <div class="item">
+                <!--左邊圖片區域-->
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400?random=20" alt="">
+                </div>
+                <!--右邊文字區域-->
+                <div class="txt">
+                    <h2>網頁切版</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia fuga dolor facere ex tempore, consequuntur odio ducimus veniam repellat natus excepturi, eius soluta possimus haru
+                    </p>
+                    <a href="" class="btn">more</a>
+                </div>
+            </div>
+            <div class="item">
+                <!--左邊圖片區域-->
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400?random=30" alt="">
+                </div>
+                <!--右邊文字區域-->
+                <div class="txt">
+                    <h2>selector(選擇器)</h2>
+                    <p>Lorem ipsum dol
+                    </p>
+                    <a href="" class="btn">more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

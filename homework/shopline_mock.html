@@ -140,6 +140,75 @@
         /* img {
             border-radius: 30%;
         } */
+        
+        /* 2_簡短說明區塊 */
+        .brief {
+            background-color: #F7F8F9;
+            padding-top: 70px;
+            padding-bottom: 70px;
+            text-align: center;
+        }
+        .brief .txt h2 {
+            margin-bottom: 30px;
+        }
+        .brief .txt p {
+            text-align: center;
+        }
+        /* 左右排列區塊 */
+        p {
+            text-align: justify
+        }
+        h2 {
+            font-size: 150%;
+            font-weight: bold;
+            color: #052855
+        }
+        .item {
+            width: 1200px;
+            margin: 15px;
+            display: flex;
+            /* margin: auto 左右對齊 */
+            margin: auto;
+        }
+        .item .pic{
+            width: 50%;
+        }
+        .item .pic img {
+             /* 因為圖片1000x800超過容器尺寸 所以要設定width和height*/
+             width: 100%;
+            height: 100%;
+        }
+        .item .txt {
+            /* 個別元素寬度是在個別元素裡設定而不是外層 */
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+             
+            display: flex;
+            flex-direction: column;
+        }
+        .item .txt h2 {
+            margin-bottom: 10px;
+        }
+        .item .txt p {
+            margin-bottom: 20px;
+            font-size: 120%;
+        }
+        .item ul {
+            list-style-type: disc;
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .item ul li {
+            width: 50%;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .item ul li::marker {
+            color: #0061FF;
+        }
     </style>
 </head>
 <body>
@@ -173,7 +242,7 @@
         </ul>
         <a href="#" class="def-btn">免費試用</a>
     </div>
-
+    <!-- 1_區塊 -->
     <div class="wrap">
         <section class="def-main-view ">
             <div class="web-info">
@@ -196,5 +265,78 @@
             </div>    
         </section>
     </div>
+    <!-- 2_區塊 -->
+    <div class="wrap">
+        <section class="brief">
+            <div class="txt">
+                <h2>
+                    單一平台就能助你<br>
+                    在全通路輕鬆開店創業
+                </h2>
+                <p>
+                    從網路商店架站到實體門市管理，只需要一個平台，就能輕鬆實現開店創業，並能同步管理所有銷售管道，SHOPLINE 助你賣得更多、賣得更好！
+                </p>
+            </div>
+        </section>
+    </div>
+    <!-- 3_左右區塊 -->
+     <div class="wrap">
+        <section class="item">
+            <!--左邊,文字區域-->
+            <div class="txt">
+                <h2>
+                    免寫程式、多款版型<br>
+                    輕鬆打造全能電商網站
+                </h2>
+                <p>
+                    不會寫程式也能輕鬆架設品牌電商官網！任何產業都能找到合適的專業設計版型，以滑鼠拖曳就能完成網頁編輯，讓架設網站就像堆積木一樣簡單。
+                </p>
+                <section class="detail-wrap">
+                    <ul>
+                        <li>豐富版型主題與字型搭配</li>
+                        <li>RWD 響應式網頁設計</li>
+                        <li>獨有網址 ＆ SSL 安全憑證</li>
+                        <li>SEO 搜尋引擎優化</li>
+                        <li>一頁商店</li>
+                        <li>開放 HTML／CSS 編輯</li>
+                    </ul>
+                </section>
+            </div>
+            <!-- 右邊,圖片區域 -->
+            <div class="pic">
+                <img src="shopline_mock_src/get_started.png" alt="">
+            </div>
+        </section>
+     </div>
+     <!-- 4_左右區塊 -->
+      <div class="wrap">
+        <section class="item">
+             <!-- 左邊,圖片區域 -->
+            <div class="pic">
+                <img src="shopline_mock_src/item_method.png" alt="">
+            </div>
+            <!-- 右邊,文字區域 -->
+            <div class="txt">
+                <h2>
+                    支持海內外電商<br>
+                    金流、物流一次搞定
+                </h2>
+                <p>
+                    支持在地及國際金流、物流串接服務，提供海內外顧客最便利的付款及送貨服務，加速消費者完成下單交易，大幅降低購物車放棄率！
+                </p>
+                <section class="deatil-wrap">
+                    <ul>
+                        <li>線上／線下信用卡刷卡</li>
+                        <li>多溫層宅配並指定運費</li>
+                        <li>第三方金流／行動支付整合</li>
+                        <li>超商／宅配貨到付款</li>
+                        <li>超商代碼／條碼繳費</li>
+                        <li>發票開立與串接</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+       
+      </div>
 </body>
 </html>
