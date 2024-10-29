@@ -7,28 +7,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="reset.css">
     <link href='http://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap' rel='stylesheet' type='text/css'>
-    <script>
-        
-        $(document).ready(function(){
-            var intervalObj = ""
-            //TODO 未來再研究輪播圖片效果
-            //resetInterval(1)
-            console.log('start')
-
-            let t = 1
-            function resetInterval(t) {
-                clearInterval(intervalObj)
-                intervalObj = setInterval(function() {
-                    // 固定3張圖片所以到4時重置為1
-                    4 == t && (t = 1),
-                    $(".web-img").attr("data-open", t),
-                    t++
-                }, 3e3)
-            }
-        });
-    </script>
+   
     <style>
-        
+        /* TODO 
+        切css檔案原則 
+        法1: 各個區塊
+        法2: 通用的all view，或是細項
+        */
         /* 按鈕reset */
         button {
             background: transparent;
@@ -213,11 +198,14 @@
 </head>
 <body>
     <!-- header -->
+     <!-- TODO 可用<nav> tag -->
     <div class="header">
         <a href="#" class="logo">
             <img src="shopline_mock_src/logo.png" alt="shopline">
         </a>
         <ul class="title-panel">
+            <!-- TODO 要不然就全部href，要不然就是全部button -->
+             <!-- TODO 不要反過來為了達成css效果而改html -->
             <li>
                 <a href="#" class="def-link bottom-line">產品核心</a>
             </li>
@@ -248,6 +236,9 @@
             <div class="web-info">
                 <h1>
                     想在哪開店創業？
+                    <!-- TODO 盡量讓網頁只會有一個h1 tag，為了SEO->title -->
+                    <!-- TODO h1裡有div不常見 -->
+                    <!-- TODO 動畫效果先不用做 -->
                     <div>
                         不管是社群購物
                     </div>
@@ -257,6 +248,7 @@
             <div class="web-img">
                 <div class="img-wrap" >
                     <picture>
+                        <!-- TODO 有一整行不換行或是依照邏輯換行的兩種方式 -->
                         <img src="shopline_mock_src/web-service-1.jpg" 
                         width="505" height="442"
                         alt="服務圖片">
@@ -280,6 +272,9 @@
         </section>
     </div>
     <!-- 3_左右區塊 -->
+     <!-- TODO ！！！優先改的區塊！！！ -->
+     <!-- TODO 左邊或右邊圖片文字 應該要用flex 翻轉排列的方式，而不是用html結構-->
+      <!--TODO 左右排版效果都是css達成，而不是html寫死 -->
      <div class="wrap">
         <section class="item">
             <!--左邊,文字區域-->
@@ -339,4 +334,24 @@
        
       </div>
 </body>
+<script>
+        
+    $(document).ready(function(){
+        var intervalObj = ""
+        //TODO 未來再研究輪播圖片效果
+        //resetInterval(1)
+        console.log('start')
+
+        let t = 1
+        function resetInterval(t) {
+            clearInterval(intervalObj)
+            intervalObj = setInterval(function() {
+                // 固定3張圖片所以到4時重置為1
+                4 == t && (t = 1),
+                $(".web-img").attr("data-open", t),
+                t++
+            }, 3e3)
+        }
+    });
+</script>
 </html>

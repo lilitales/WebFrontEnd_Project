@@ -1,0 +1,32 @@
+.main-board {
+    background-color: #F7F8F9;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* text-align: center; */
+}
+.info-showbox {
+    padding: 30px;
+    position: relative;
+}
+
+#hero-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hero-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px
+}
+.hero-card .hero-name {
+    text-align: center;
+}
+
+.hero-img {
+    width: 100px;
+    height: 100px;
+}
